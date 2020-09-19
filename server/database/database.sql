@@ -9,6 +9,6 @@ CREATE TABLE contenidos(
     materia VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     idcontenido INT,
-    codigomateria INT,
+    codigomateria INT NOT NULL ,
 );
 
