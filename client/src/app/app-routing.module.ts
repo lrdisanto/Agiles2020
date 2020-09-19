@@ -10,11 +10,11 @@ const routes: Routes = [
 },
 { 
   path: 'homeLogin', 
-  loadChildren: () => import('./home-login/home-login.module').then(m => m.HomeLoginModule) 
+  loadChildren: () => import('./components/home-login/home-login.module').then(m => m.HomeLoginModule) 
 },
 { 
   path: 'login', 
-  loadChildren: () => import('./auth/login/login.module').then(m => m.LoginModule) 
+  loadChildren: () => import('./components/auth/login/login.module').then(m => m.LoginModule) 
 }, 
 ];
 
