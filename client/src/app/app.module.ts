@@ -3,14 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { NavbarComponent } from './shared/navbar/navbar.component';
+
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, NavbarComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule
+    BrowserModule, 
+    AppRoutingModule, 
+    ReactiveFormsModule, 
   ],
   providers: [],
   bootstrap: [AppComponent]
