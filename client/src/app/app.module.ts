@@ -6,14 +6,26 @@ import { AppComponent } from './app.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
 import { LogindosComponent } from './components/logindos/logindos.component';
+import { PaginainicioComponent } from './components/paginainicio/paginainicio.component';
+import { Routes, RouterModule } from '@angular/router';
+import { PaginaprofesorComponent } from './components/paginaprofesor/paginaprofesor.component';
+import { PaginaalumnoComponent } from './components/paginaalumno/paginaalumno.component';
+
+const routes: Routes = [
+{path: '', component: PaginainicioComponent},
+{path: 'logindos', component: LogindosComponent},
+{path: 'paginaprofesor', component: PaginaprofesorComponent},
+{path: 'paginaalumno', component: PaginaalumnoComponent},
+];
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogindosComponent],
+  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent],
   imports: [
-    BrowserModule, 
-    AppRoutingModule, 
-    ReactiveFormsModule, 
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot(routes),
   ],
   providers: [],
   bootstrap: [AppComponent]

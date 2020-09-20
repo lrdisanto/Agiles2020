@@ -2,12 +2,15 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-{
-    path:'',
-    redirectTo:'/homeLogin',
-    pathMatch:'full',
+// {
+//     path:'',
+//    redirectTo:'/homeLogin',
+//     pathMatch:'full',
+ 
+// },
+ 
 
-},
+
 { 
   path: 'homeLogin', 
   loadChildren: () => import('./components/home-login/home-login.module').then(m => m.HomeLoginModule) 

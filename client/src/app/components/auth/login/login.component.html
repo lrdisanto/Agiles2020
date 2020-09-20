@@ -2,7 +2,7 @@
     <div class="col-md-6 mx-auto mt-5">
         <div class="card">
             <div class="card-body">
-                <h1 class="text-center">Ingreso al Campus Virtual</h1>
+                <h1 class="text-center">Ingreso Alumnos</h1>
                 <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
                     <div class="form-group">
                         <label for="email">Email</label>
@@ -12,7 +12,7 @@
                         <label for="password">Contraseña</label>
                         <input type="password" class="form-control" formControlName="password" />
                     </div>
-                    <button type=" submit " class="btn btn-primary btn-lg btn-block ">Login</button>
+                    <button (click)="paginaalumno()" type=" submit " class="btn btn-primary btn-lg btn-block ">Login</button>
                 </form>
             </div>
         </div>

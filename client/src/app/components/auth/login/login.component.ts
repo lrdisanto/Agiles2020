@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup} from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,13 +13,18 @@ export class LoginComponent implements OnInit {
     email: new FormControl(''),
     password: new FormControl(''),
   });
-  constructor( ) { }
+  constructor( private router: Router) { }
 
   ngOnInit(): void {
   }
 
   onLogin(){
     console.log('Form->', this.loginForm.value);
+  }
+
+  paginaalumno(){
+    this.router.navigate(['/paginaalumno']);
+
   }
 
 }
