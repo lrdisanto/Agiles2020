@@ -11,6 +11,10 @@ import { Routes, RouterModule } from '@angular/router';
 import { PaginaprofesorComponent } from './components/paginaprofesor/paginaprofesor.component';
 import { PaginaalumnoComponent } from './components/paginaalumno/paginaalumno.component';
 
+import { APP_BASE_HREF } from '@angular/common';
+import { CabeceraComponent } from './components/paginainicio/@components/cabecera/cabecera.component';
+import { FooterComponent } from './components/paginainicio/@components/footer/footer.component';
+
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
 {path: 'logindos', component: LogindosComponent},
@@ -20,14 +24,21 @@ const routes: Routes = [
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent],
+  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+  
+    // ContactModule,
+    // FooterModule,
+    // HeaderModule,
+    // PortfolioModule,
+    // CabeceraModule,
+    
   ],
-  providers: [],
+  providers: [ { provide: APP_BASE_HREF, useValue : '/' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

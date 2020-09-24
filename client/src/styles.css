@@ -1,0 +1,10 @@
+/*Font Awesome icons (free version)*/
+@import 'https://use.fontawesome.com/releases/v5.13.0/js/all.js';
+/*Google fonts*/
+@import 'https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700"';
+@import 'https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic';
+/*Third party plugin CSS*/
+@import 'https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css';
+/*Core theme CSS (includes Boostrap*/
+@import 'assets/css/styles.css';
+
