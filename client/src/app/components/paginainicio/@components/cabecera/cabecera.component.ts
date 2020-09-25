@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 
 @Component({
   selector: 'app-cabecera',
@@ -8,7 +9,12 @@ import { Router } from '@angular/router';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, _cargarScripts:CargarScriptsService) {
+    _cargarScripts.cargar(["js/scripts"]);
+
+  }
+  
+   
 
   ngOnInit(): void {
   }
