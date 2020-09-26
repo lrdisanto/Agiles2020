@@ -19,5 +19,14 @@ export class PaginainicioComponent implements OnInit {
 // navegaralogin2(){
 //   this.router.navigate(['/logindos']);
 // }
+navegaralogin(){
+  this.router.navigate(['/login']);
+}
+navegaralogin2(){
+  this.router.navigate(['/logindos']);
+}
 
+navegarhome() {
+  this.router.navigate(['']);
+}
 }

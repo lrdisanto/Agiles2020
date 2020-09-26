@@ -9,8 +9,8 @@ import { CargarScriptsService } from 'src/app/cargar-scripts.service';
 })
 export class CabeceraComponent implements OnInit {
 
-  constructor(private router:Router, _cargarScripts:CargarScriptsService) {
-    _cargarScripts.cargar(["js/scripts"]);
+  constructor(private router:Router) {
+    
 
   }
   
