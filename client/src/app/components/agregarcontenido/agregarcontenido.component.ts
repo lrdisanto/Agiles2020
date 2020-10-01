@@ -6,11 +6,11 @@ import { ContenidosService } from '../../services/contenidos.service';
 @Component({
   selector: 'app-agregarcontenido',
   templateUrl: './agregarcontenido.component.html',
-  styleUrls: ['./agregarcontenido.component.scss']
+  styleUrls: ['./agregarcontenido.component.css']
 })
 export class AgregarcontenidoComponent implements OnInit {
 
- // @HostBinding('class') class='row'; ---> esto hace que el formulario sea una unica row en toda la pantalla, lo dejo por las dudas
+//  @HostBinding('class') class='row'; // ---> esto hace que el formulario sea una unica row en toda la pantalla, lo dejo por las dudas
   
   contenido: Contenido = {
    idcontenido:0,
