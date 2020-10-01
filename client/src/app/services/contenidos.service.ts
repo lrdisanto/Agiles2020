@@ -19,13 +19,13 @@ export class ContenidosService {
     return this.http.get('http://localhost:3000/api/contenidos')
   }
 
-  getContenido(id: string) {
+  getContenido(idcontenido: string) {
 
     return this.http.get('http://localhost:3000/api/contenidos/${id}');
 
   }
 
-  deleteContenido(id: string) {
+  deleteContenido(idcontenido: string) {
 
       return this.http.delete('http://localhost:3000/api/contenidos/${id}');
 
@@ -35,7 +35,7 @@ export class ContenidosService {
     return this.http.post('http://localhost:3000/api/contenidos', contenido);
   }
 
-  updateContenido(id: string, updatedContenido: Contenido): Observable<any> { 
+  updateContenido(idcontenido: string, updatedContenido: Contenido): Observable<any> { 
 
     return this.http.put('http://localhost:3000/api/contenidos/${id}', updatedContenido);
 

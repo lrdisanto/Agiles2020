@@ -5,7 +5,8 @@ import { ContenidosService } from '../../services/contenidos.service';
 @Component({
   selector: 'app-muestrocontenidos',
   templateUrl: './muestrocontenidos.component.html',
-  styleUrls: ['./muestrocontenidos.component.scss']
+  styleUrls: ['./muestrocontenidos.component.css',
+      ]
 })
 export class MuestrocontenidosComponent implements OnInit {
 

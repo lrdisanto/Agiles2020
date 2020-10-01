@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
+
 // INICIO Servicio
 import { CargarScriptsService } from "./cargar-scripts.service";
 // FIN Servicio
@@ -19,7 +21,6 @@ import { FooterComponent } from './components/paginainicio/@components/footer/fo
 import { ContactComponent } from './components/paginainicio/@components/contact/contact.component';
 import { HeaderComponent } from './components/paginainicio/@components/header/header.component';
 import { PortfolioComponent } from './components/paginainicio/@components/portfolio/portfolio.component';
-import { AgregocontenidoComponent } from './components/agregocontenido/agregocontenido.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ContenidosService } from './services/contenidos.service';
 import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
@@ -30,20 +31,20 @@ const routes: Routes = [
 {path: 'logindos', component: LogindosComponent},
 {path: 'paginaprofesor', component: PaginaprofesorComponent},
 {path: 'paginaalumno', component: PaginaalumnoComponent},
-{path: 'agregocontenido', component:AgregocontenidoComponent},
 {path: 'muestrotodos', component:MuestrocontenidosComponent},
 {path: 'agregarcontenido', component:AgregarcontenidoComponent},
 ];
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent, PortfolioComponent, AgregocontenidoComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
+  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent, PortfolioComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
     HttpClientModule,
+    FormsModule,
     
   ],
   providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService ,
