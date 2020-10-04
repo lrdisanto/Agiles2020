@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule} from '@angular/forms';
+
 // INICIO Servicio
 import { CargarScriptsService } from "./cargar-scripts.service";
 // FIN Servicio
@@ -13,13 +15,13 @@ import { PaginainicioComponent } from './components/paginainicio/paginainicio.co
 import { Routes, RouterModule } from '@angular/router';
 import { PaginaprofesorComponent } from './components/paginaprofesor/paginaprofesor.component';
 import { PaginaalumnoComponent } from './components/paginaalumno/paginaalumno.component';
-
 import { APP_BASE_HREF } from '@angular/common';
 import { CabeceraComponent } from './components/paginainicio/@components/cabecera/cabecera.component';
 import { FooterComponent } from './components/paginainicio/@components/footer/footer.component';
 import { ContactComponent } from './components/paginainicio/@components/contact/contact.component';
 import { HeaderComponent } from './components/paginainicio/@components/header/header.component';
 import { PortfolioComponent } from './components/paginainicio/@components/portfolio/portfolio.component';
+<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -31,22 +33,31 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+=======
+import { HttpClientModule } from '@angular/common/http';
+import { ContenidosService } from './services/contenidos.service';
+import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
+import { AgregarcontenidoComponent } from './components/agregarcontenido/agregarcontenido.component';
+>>>>>>> agregar-eliminar
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
 {path: 'logindos', component: LogindosComponent},
 {path: 'paginaprofesor', component: PaginaprofesorComponent},
 {path: 'paginaalumno', component: PaginaalumnoComponent},
+{path: 'muestrotodos', component:MuestrocontenidosComponent},
+{path: 'agregarcontenido', component:AgregarcontenidoComponent},
 ];
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent, PortfolioComponent],
+  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent, PortfolioComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+<<<<<<< HEAD
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -60,9 +71,14 @@ const routes: Routes = [
     FlexLayoutModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
+=======
+    HttpClientModule,
+    FormsModule,
+>>>>>>> agregar-eliminar
     
   ],
-  providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService  ],
+  providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService ,
+              { provide:ContenidosService } ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
