@@ -1,0 +1,118 @@
+
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Robot, Helvetica, Arial;
+}
+
+.main-content{
+    font-family: Robot, Helvetica, Arial;
+
+}
+
+body{
+    font-family: Robot, Helvetica, Arial;
+}
+
+
+mat-sidenav {
+    width: 300px;
+    padding:15px;
+}
+
+
+.mat-drawer { 
+    background-color: #FD5733;
+    color:#fff;
+
+}
+
+.main-content {
+    padding:20px;
+    color:#fff;
+
+}
+.toolbar-spacer {
+    flex: 1 1 auto;
+}
+
+.barraSuperior{
+    background-color: #FD5733;
+    font-family: Robot, Helvetica, Arial;
+}
+
+.titulo{
+    margin: 0 auto;
+    font-size: 30px;
+    font-family: Robot, Helvetica, Arial;
+    font: bold;
+    background-color:#fff;
+
+    
+
+}
+
+mat-toolbar {
+    justify-content: space-between;
+}
+
+.content {
+    padding: 16px;
+    
+}
+
+.content > mat-card {
+    margin-bottom: 16px;
+}
+
+.infoPerfil .imagenPerfil{
+    width: 250px;
+    height: 250px;
+    border-radius: 200px;
+    margin-bottom: 10px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}
+
+.perfilTitulo {
+    font-family: Robot, Helvetica, Arial;
+    font-size: 20px;
+}
+
+.perfilEstilo {
+    font-family: Robot, Helvetica, Arial;
+    font-size: 15px;
+}
+
+.boton{
+    background-color: #E17000;
+}
+
+.materia{
+    font-family: Robot, Helvetica, Arial;
+}
+
+mat-card-title{
+font-family: Robot, Helvetica, Arial;
+}
+
+.materias:hover{
+        transform: scale(1.11);
+        box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+      }
+      .materias {
+        transition: 0.5s ease;
+        cursor: pointer;
+        margin:10px;
+      }
+
+button{
+        border-radius:10px;
+        outline:none;
+        }
+
+.btn:focus {
+            box-shadow: none;
+          }
+
+a{
+    color: black;
+}

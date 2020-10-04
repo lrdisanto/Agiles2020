@@ -1,1 +1,121 @@
-<p>paginaalumno works!</p>
+
+<mat-sidenav-container fullscreen> 
+  
+    <mat-sidenav mode="side" #sidenav closed position="start">
+      
+      <div class="sidebar">
+        <div class="infoPerfil">
+          <img src="../../../assets/img/nene.png" class="imagenPerfil">
+        </div>
+  
+       <div>
+            <mat-card class="mat-elevation-z8">
+              <mat-card-content>
+              <mat-card-title class="perfilTitulo">Información del Alumno</mat-card-title>
+                <div class="perfilEstilo">
+                <p></p>
+                <p></p>
+                  <p><b>Nombre:</b> Josesito</p>
+                  <p><b>Apellido:</b> Deodo</p>
+                  <p><b>Edad:</b> 6 años</p>
+                  <p><b>Año Cursado:</b> 1ª Grado</p>
+                  <p></p>
+                </div>
+  
+      
+              </mat-card-content> 
+            </mat-card>
+  
+          </div>
+  <p></p>
+  <p></p>
+  <p></p>
+          <div>
+            <mat-card class="mat-elevation-z8">
+              <mat-card-content>
+              <mat-card-title><h2>Notificaciones</h2></mat-card-title>
+                <div class="perfilEstilo">
+                <p></p>
+                <p></p>
+                  
+                <button class="boton" mat-raised-button color="primary" style="margin: 5px"
+                     matBadge="" matBadgePosition="before" matBadgeColor="accent">
+                    <mat-icon>email</mat-icon>
+                </button>
+  
+                <button class="boton" mat-raised-button color="primary" style="margin: 5px"
+                     matBadge="" matBadgePosition="before" matBadgeColor="accent">
+                     <mat-icon>calendar_today</mat-icon>
+                </button>
+  
+                <button class="boton" mat-raised-button color="primary" style="margin: 5px"
+                     matBadge="" matBadgePosition="before" matBadgeColor="accent">
+                     <mat-icon>settings</mat-icon>
+                </button>
+  
+                </div>
+      
+              </mat-card-content> 
+            </mat-card>
+  
+          </div>
+  
+      </div>
+      
+    </mat-sidenav>
+  
+  
+  
+    <mat-sidenav-content>
+  
+  
+  
+  
+  
+          <mat-toolbar class="barraSuperior">
+                  <button mat-icon-button (click)="sidenav.toggle()">
+                    <mat-icon>menu</mat-icon>
+                  </button>
+                        <span class="toolbar-spacer">COLEGIO KENNEDY</span>
+                  <button class="btn btn-royalblue">
+                    <a><mat-icon>share</mat-icon></a>            <!--  Agregar el link de share -->
+                  </button>
+          </mat-toolbar>
+          
+          
+          <div class="main-content" style="background-color: #fff;">
+  
+                <mat-toolbar style="background-color:#fff">
+                  <span class="titulo"> CURSADAS - CICLO 2020</span>
+                </mat-toolbar>
+                
+                <div class="content" ng-class="{show: show}" fxLayout="row wrap" fxLayoutGap="16px grid">
+                  <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let profesores of profesor">
+                      <mat-card class="materias" >
+                          <mat-card-header>
+                                <img mat-card-avatar [src]="profesores.avatar" class="avatarMateria">
+                                <mat-card-title>{{profesores.title}}</mat-card-title>
+                                <mat-card-subtitle>{{profesores.subtitle}}</mat-card-subtitle>  
+                          </mat-card-header>
+  
+                            <img mat-card-image [src]="profesores.url" alt="Photo of {{profesores.title}}">
+                          <mat-card-content>
+                              <p>
+                                <b>{{profesores.content}}</b>
+                              </p>
+                          </mat-card-content>
+  
+                              <mat-card-actions>
+                                <button class="btn btn-primary" mat-button>VER CONTENIDO</button>
+                              </mat-card-actions>
+                      </mat-card>
+                  </div>
+                </div>
+  
+          </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <router-outlet></router-outlet>
+  
+
+  
