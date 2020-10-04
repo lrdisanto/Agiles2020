@@ -20,6 +20,17 @@ import { FooterComponent } from './components/paginainicio/@components/footer/fo
 import { ContactComponent } from './components/paginainicio/@components/contact/contact.component';
 import { HeaderComponent } from './components/paginainicio/@components/header/header.component';
 import { PortfolioComponent } from './components/paginainicio/@components/portfolio/portfolio.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {FormsModule} from '@angular/forms';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatToolbarModule} from '@angular/material/toolbar';
+import {MatIconModule} from '@angular/material/icon';
+import {MatButtonModule} from '@angular/material/button';
+import {MatCardModule} from '@angular/material/card';
+import {MatGridListModule} from '@angular/material/grid-list';
+import {FlexLayoutModule} from '@angular/flex-layout';
+import {MatBadgeModule} from '@angular/material/badge';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
@@ -36,6 +47,19 @@ const routes: Routes = [
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+    MatSidenavModule,
+    MatToolbarModule,
+    MatIconModule,
+    MatButtonModule,
+    MatCardModule,
+    MatGridListModule,
+    FlexLayoutModule,
+    MatBadgeModule,
+    MatProgressSpinnerModule,
     
   ],
   providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService  ],
