@@ -33,6 +33,8 @@ import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ContenidosService } from './services/contenidos.service';
+import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
+import { AgregarcontenidoComponent } from './components/agregarcontenido/agregarcontenido.component';
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
