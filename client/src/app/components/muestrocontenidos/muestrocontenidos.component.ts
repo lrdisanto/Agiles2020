@@ -39,12 +39,8 @@ export class MuestrocontenidosComponent implements OnInit {
       },
 
       err => console.log(err)
-
-
-
-    )
-    
-
+    ) 
+    location.reload();
   }
-
+    
 }

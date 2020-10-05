@@ -9,7 +9,7 @@ import { Observable } from 'rxjs';
 })
 export class ContenidosService {
 
-  //  API_URI = 'http://localhost:3000/api';
+  API_URI = 'http://localhost:3000/api';
 
   constructor( private http: HttpClient) { }
 
@@ -19,15 +19,15 @@ export class ContenidosService {
     return this.http.get('http://localhost:3000/api/contenidos')
   }
 
-  getContenido(idcontenido: string) {
+  getContenido(id: string) {
 
     return this.http.get('http://localhost:3000/api/contenidos/${id}');
 
   }
 
-  deleteContenido(idcontenido: string) {
+  deleteContenido(id: string) {
 
-      return this.http.delete('http://localhost:3000/api/contenidos/${id}');
+      return this.http.delete(`${this.API_URI}/contenidos/${id}`);
 
   }
 

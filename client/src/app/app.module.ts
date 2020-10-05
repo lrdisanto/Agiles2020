@@ -35,19 +35,25 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import { ContenidosService } from './services/contenidos.service';
 import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
 import { AgregarcontenidoComponent } from './components/agregarcontenido/agregarcontenido.component';
+import { HttpClientModule } from '@angular/common/http';
+
+
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
 {path: 'logindos', component: LogindosComponent},
 {path: 'paginaprofesor', component: PaginaprofesorComponent},
 {path: 'paginaalumno', component: PaginaalumnoComponent},
-{path: 'muestrotodos', component:MuestrocontenidosComponent},
-{path: 'agregarcontenido', component:AgregarcontenidoComponent},
+{path: 'muestrotodos', component: MuestrocontenidosComponent},
+{path: 'agregarcontenido', component: AgregarcontenidoComponent},
 ];
 
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, LogindosComponent, PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent, CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent, PortfolioComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
+  declarations: [AppComponent, NavbarComponent, LogindosComponent,
+    PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent,
+     CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
+     PortfolioComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -66,8 +72,7 @@ const routes: Routes = [
     FlexLayoutModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
-    
-  ],
+    HttpClientModule],
   providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService ,
               { provide:ContenidosService } ],
   bootstrap: [AppComponent]

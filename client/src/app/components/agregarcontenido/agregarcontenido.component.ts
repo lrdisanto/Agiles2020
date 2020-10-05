@@ -13,12 +13,12 @@ export class AgregarcontenidoComponent implements OnInit {
 //  @HostBinding('class') class='row'; // ---> esto hace que el formulario sea una unica row en toda la pantalla, lo dejo por las dudas
   
   contenido: Contenido = {
-   idcontenido:0,
-    descripcion:'',
-    link:'',
-    materia:'',
-    created_at:new Date(),
-    codigomateria:2
+   idcontenido: 0,
+    descripcion: '',
+    link: '',
+    materia: '',
+    created_at: new Date(),
+    codigomateria: 2
    };
 
   constructor(private contenidosService: ContenidosService) { }
@@ -41,6 +41,7 @@ export class AgregarcontenidoComponent implements OnInit {
 
 
     )
+    location.reload();
   }
 
 }
