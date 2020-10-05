@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
+//import { FormsModule} from '@angular/forms';
 
 // INICIO Servicio
 import { CargarScriptsService } from "./cargar-scripts.service";
@@ -21,7 +21,6 @@ import { FooterComponent } from './components/paginainicio/@components/footer/fo
 import { ContactComponent } from './components/paginainicio/@components/contact/contact.component';
 import { HeaderComponent } from './components/paginainicio/@components/header/header.component';
 import { PortfolioComponent } from './components/paginainicio/@components/portfolio/portfolio.component';
-<<<<<<< HEAD
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {FormsModule} from '@angular/forms';
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -33,12 +32,7 @@ import {MatGridListModule} from '@angular/material/grid-list';
 import {FlexLayoutModule} from '@angular/flex-layout';
 import {MatBadgeModule} from '@angular/material/badge';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
-=======
-import { HttpClientModule } from '@angular/common/http';
 import { ContenidosService } from './services/contenidos.service';
-import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
-import { AgregarcontenidoComponent } from './components/agregarcontenido/agregarcontenido.component';
->>>>>>> agregar-eliminar
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
@@ -57,7 +51,6 @@ const routes: Routes = [
     AppRoutingModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
-<<<<<<< HEAD
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -71,10 +64,6 @@ const routes: Routes = [
     FlexLayoutModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
-=======
-    HttpClientModule,
-    FormsModule,
->>>>>>> agregar-eliminar
     
   ],
   providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService ,
