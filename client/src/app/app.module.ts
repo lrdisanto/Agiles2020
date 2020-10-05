@@ -36,6 +36,9 @@ import { ContenidosService } from './services/contenidos.service';
 import { MuestrocontenidosComponent } from './components/muestrocontenidos/muestrocontenidos.component';
 import { AgregarcontenidoComponent } from './components/agregarcontenido/agregarcontenido.component';
 import { HttpClientModule } from '@angular/common/http';
+import { CabeceradosComponent } from './components/cabecerados/cabecerados.component';
+import { MuestrotodoalumnosComponent } from './components/muestrotodoalumnos/muestrotodoalumnos.component';
+import { UrlsPipe } from './components/urls.pipe';
 
 
 
@@ -46,6 +49,7 @@ const routes: Routes = [
 {path: 'paginaalumno', component: PaginaalumnoComponent},
 {path: 'muestrotodos', component: MuestrocontenidosComponent},
 {path: 'agregarcontenido', component: AgregarcontenidoComponent},
+{path: 'muestroalumnos', component: MuestrotodoalumnosComponent}
 ];
 
 
@@ -53,7 +57,9 @@ const routes: Routes = [
   declarations: [AppComponent, NavbarComponent, LogindosComponent,
     PaginainicioComponent, PaginaprofesorComponent, PaginaalumnoComponent,
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
-     PortfolioComponent, MuestrocontenidosComponent, AgregarcontenidoComponent],
+     PortfolioComponent, MuestrocontenidosComponent,
+     AgregarcontenidoComponent, CabeceradosComponent,
+      MuestrotodoalumnosComponent, UrlsPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,

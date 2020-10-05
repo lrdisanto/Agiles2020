@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-paginaalumno',
@@ -6,6 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['paginaalumno.component.scss']
 })
 export class PaginaalumnoComponent{
+
+  constructor(private router: Router) { }
+
+
+  
+  
   title="Escuela"
   opened = false;
   profesor: {title: string, subtitle: string, avatar: string, content: string, url: string}[] = [
@@ -23,7 +30,16 @@ export class PaginaalumnoComponent{
     {name: 'Josesito', surname: 'Deodo', age:'6 años', year: '1º Grado', avatar:'./../assets/images/nene.png' }
   ]
 
+
+  vercontenidos() {
+    this.router.navigate(['/muestroalumnos']);
+
+
+  }
+
 }
+
+
 
  
 

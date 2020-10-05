@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-logindos',
   templateUrl: './logindos.component.html',
-  styleUrls: ['./logindos.component.scss']
+  styleUrls: ['./logindos.component.css']
 })
 export class LogindosComponent implements OnInit {
 
