@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap');
 :root {
     --blue: #007bff;
     --indigo: #6610f2;
@@ -10203,6 +10204,10 @@ hr.light {
     #mainNav.navbar-scrolled .navbar-nav .nav-item .nav-link:hover {
         color: #f4623a;
     }
+}
+
+.letralogin {
+    font-family: 'Sansita Swashed', cursive;
 }
 
 header.masthead {
