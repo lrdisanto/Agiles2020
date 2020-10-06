@@ -2,6 +2,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { Contenido } from 'src/app/models/Contenido';
 
 import { ContenidosService } from '../../services/contenidos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-agregarcontenido',
@@ -21,7 +22,7 @@ export class AgregarcontenidoComponent implements OnInit {
     codigomateria: 2
    };
 
-  constructor(private contenidosService: ContenidosService) { }
+  constructor(private contenidosService: ContenidosService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -42,6 +43,10 @@ export class AgregarcontenidoComponent implements OnInit {
 
     )
     location.reload();
+  }
+
+  inicio() {
+    this.router.navigate(['/']);
   }
 
 }
