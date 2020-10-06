@@ -5,7 +5,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss'],
+  styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
 
@@ -23,7 +23,19 @@ export class LoginComponent implements OnInit {
   }
 
   paginaalumno(){
-    this.router.navigate(['/paginaalumno']);
+    var usuario=document.getElementById("emailprofesor").value;
+    console.log(usuario);
+    var clave=document.getElementById("claveprofesor").value;
+    console.log(clave);
+
+    if (usuario === 'emilio@gmail.com' && clave === '123456') {
+      this.router.navigate(['/paginaalumno']);
+
+    }
+
+  else {
+    alert('Usuario o contraseña incorrectos')
+  }
 
   }
   

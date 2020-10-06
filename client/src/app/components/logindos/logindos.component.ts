@@ -16,8 +16,26 @@ export class LogindosComponent implements OnInit {
   }
 
   paginaprofesor(){
-    this.router.navigate(['/paginaprofesor']);
+
+    
+      var usuario=document.getElementById("emailalumno").value;
+      console.log(usuario);
+      var clave=document.getElementById("clavealumno").value;
+      console.log(clave);
+  
+      if (usuario === 'martin@gmail.com' && clave === '123456') {
+        this.router.navigate(['/paginaprofesor']);
+
+  
+      }
+  
+    else {
+      alert('Usuario o contraseña incorrectos')
+    }
+  
+    }
+
 
   }
 
-}
+
