@@ -1,5 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 
+@import url('https://fonts.googleapis.com/css2?family=Vollkorn+SC&display=swap');
+.letracursada {
+    font-family: 'Vollkorn SC', serif;
+    font-size: 35px;
+    text-align: center;
+    color: white;
+}
+
 body {
     font-family: Robot, Helvetica, Arial;
 }
@@ -135,4 +143,9 @@ a {
 
 h3 {
     color: black;
+}
+
+.tam {
+    width: 300;
+    height: 400;
 }
