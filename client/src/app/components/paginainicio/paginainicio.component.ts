@@ -29,4 +29,8 @@ navegaralogin2(){
 navegarhome() {
   this.router.navigate(['']);
 }
+
+administrador() {
+  this.router.navigate(['administrador']);
+}
 }

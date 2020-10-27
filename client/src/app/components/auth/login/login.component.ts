@@ -23,19 +23,19 @@ export class LoginComponent implements OnInit {
   }
 
   paginaalumno(){
-    // const usuario = (document.getElementById("emailprofesor")as HTMLTextAreaElement).value;
-    // console.log(usuario);
-    // var clave= (document.getElementById("claveprofesor") as HTMLTextAreaElement).value;
-    // console.log(clave);
+     const usuario = (document.getElementById("emailprofesor")as HTMLTextAreaElement).value;
+     console.log(usuario);
+     var clave= (document.getElementById("claveprofesor") as HTMLTextAreaElement).value;
+     console.log(clave);
 
-    // if (usuario === 'emilio@gmail.com' && clave === '123456') {
+     if (usuario === 'alumno@gmail.com' && clave === '123456') {
       this.router.navigate(['/paginaalumno']);
 
-  //   }
+     }
 
-  // else {
-  //   alert('Usuario o contraseña incorrectos')
-  // }
+   else {
+     alert('Usuario o contraseña incorrectos')
+   }
 
   }
   

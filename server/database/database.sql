@@ -8,7 +8,12 @@ CREATE TABLE contenidos(
     link VARCHAR(255),
     materia VARCHAR(255),
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    idcontenido INT,
+    idcontenido INT NOT NULL,
     codigomateria INT NOT NULL ,
+         PRIMARY KEY (idcontenido)
+
 );
+
+
+
 

@@ -39,6 +39,10 @@ import { HttpClientModule } from '@angular/common/http';
 import { CabeceradosComponent } from './components/cabecerados/cabecerados.component';
 import { MuestrotodoalumnosComponent } from './components/muestrotodoalumnos/muestrotodoalumnos.component';
 import { UrlsPipe } from './components/urls.pipe';
+import { AdministradorComponent } from './components/administrador/administrador.component';
+import { AltaprofesorComponent } from './components/altaprofesor/altaprofesor.component';
+import { AltaasignaturaComponent } from './components/altaasignatura/altaasignatura.component';
+import { AltaalumnosComponent } from './components/altaalumnos/altaalumnos.component';
 
 
 
@@ -49,7 +53,11 @@ const routes: Routes = [
 {path: 'paginaalumno', component: PaginaalumnoComponent},
 {path: 'muestrotodos', component: MuestrocontenidosComponent},
 {path: 'agregarcontenido', component: AgregarcontenidoComponent},
-{path: 'muestroalumnos', component: MuestrotodoalumnosComponent}
+{path: 'muestroalumnos', component: MuestrotodoalumnosComponent},
+{path: 'administrador', component: AdministradorComponent},
+{path: 'altaalumnos', component: AltaalumnosComponent},
+{path: 'altaprofesor', component: AltaprofesorComponent},
+{path: 'altaasignatura', component: AltaasignaturaComponent}
 ];
 
 
@@ -59,7 +67,7 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

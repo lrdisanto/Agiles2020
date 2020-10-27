@@ -16,7 +16,7 @@ export class ContenidosService {
   getContenidos() {
   
    // return this.http.get('${this.API_URI}/contenidos');
-    return this.http.get('http://localhost:3000/api/contenidos')
+    return this.http.get('http://localhost:3000/api/contenidos');
   }
 
   getContenido(id: string) {
