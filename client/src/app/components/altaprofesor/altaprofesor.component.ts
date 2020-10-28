@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Profesor } from 'src/app/models/profesor';
+
+import {ProfesoresService} from '../../services/profesores.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-altaprofesor',
@@ -7,9 +11,39 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AltaprofesorComponent implements OnInit {
 
-  constructor() { }
+  profesor: Profesor = {
+    mail: '',
+    nombre: '',
+    apellido:'',
+    dni: null,
+    
+  };
 
-  ngOnInit(): void {
-  }
+  constructor(private profesoresService: ProfesoresService) { }
+
+  ngOnInit(): void {}
+
+ 
+    saveNewProfesor(){
+
+   
+  
+      this.profesoresService.saveProfesor(this.profesor)
+      .subscribe(
+        res => {
+          console.log(res);
+        },
+        err => console.error(err)
+  
+  
+  
+      )
+      location.reload();
+    }
+  
+    //  inicio() {
+    //   this.router.navigate(['/']);
+    //  }
+  
 
 }

@@ -1,6 +1,8 @@
 import express, {Application} from 'express';
 import indexRoutes from "./routes/indexRoutes";
-import contenidoRoutes from "./routes/contenidoRoutes"
+import indexRoutesProf from "./routesProf/indexRoutesProf";
+import contenidoRoutes from "./routes/contenidoRoutes";
+import profRoutes from "./routesProf/profRoutes";
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -11,6 +13,7 @@ class Server {
         this.app = express();
         this.config();
         this.routes();
+        this.routesProf();
     }
 
 config(): void {
@@ -25,7 +28,10 @@ routes(): void {
     this.app.use('/',indexRoutes);
     this.app.use('/api/contenidos', contenidoRoutes);
 }
-
+routesProf(): void {
+    this.app.use('/',indexRoutesProf);
+    this.app.use('/api/profesor', profRoutes);
+}
 start(): void {
     this.app.listen(this.app.get('port'), () =>{
     console.log('Server on port', this.app.get('port'));

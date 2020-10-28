@@ -14,6 +14,16 @@ CREATE TABLE contenidos(
 
 );
 
+CREATE TABLE profesor(
+idprofesor INT NOT NULL AUTO_INCREMENT,
+mail VARCHAR(255),
+nombre VARCHAR(255),
+apellido VARCHAR(255),
+dni INT,
+
+PRIMARY KEY(idprofesor)
+);
+
 
 
 

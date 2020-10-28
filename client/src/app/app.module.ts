@@ -43,6 +43,7 @@ import { AdministradorComponent } from './components/administrador/administrador
 import { AltaprofesorComponent } from './components/altaprofesor/altaprofesor.component';
 import { AltaasignaturaComponent } from './components/altaasignatura/altaasignatura.component';
 import { AltaalumnosComponent } from './components/altaalumnos/altaalumnos.component';
+import { ProfesoresService } from './services/profesores.service';
 
 
 
@@ -88,7 +89,8 @@ const routes: Routes = [
     MatProgressSpinnerModule,
     HttpClientModule],
   providers: [ { provide: APP_BASE_HREF, useValue : '/' }, CargarScriptsService ,
-              { provide:ContenidosService } ],
+              { provide:ContenidosService }, 
+              ProfesoresService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
