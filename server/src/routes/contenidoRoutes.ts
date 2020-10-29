@@ -14,8 +14,6 @@ import contenidosController from '../controllers/contenidosController';
         this.router.delete('/:id', contenidosController.delete );
         this.router.put('/:id', contenidosController.update );
         this.router.get('/:id', contenidosController.getOne);
-
-
     }
 }
 

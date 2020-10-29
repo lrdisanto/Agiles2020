@@ -1,6 +1,8 @@
 import express, {Application} from 'express';
 import indexRoutes from "./routes/indexRoutes";
 import contenidoRoutes from "./routes/contenidoRoutes"
+
+import altaAlumnoRoutes from "./routes/altaAlumnoRoutes";
 import morgan from 'morgan';
 import cors from 'cors';
 
@@ -24,6 +26,7 @@ config(): void {
 routes(): void {
     this.app.use('/',indexRoutes);
     this.app.use('/api/contenidos', contenidoRoutes);
+    this.app.use('/api/alumno', altaAlumnoRoutes);
 }
 
 start(): void {

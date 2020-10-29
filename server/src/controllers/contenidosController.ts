@@ -2,8 +2,8 @@ import { Request, Response } from 'express';
 import pool from '../database';
 
 class ContenidosController {
-  
-  
+
+
 public async list (req: Request,res: Response) {
     await pool.query('SELECT * FROM contenidos', function(err, result, fields) {
         if (err) throw err;
