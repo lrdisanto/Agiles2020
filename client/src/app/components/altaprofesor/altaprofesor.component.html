@@ -1,1 +1,68 @@
 
+<header class="masthead">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <!-- <img (click)="inicio()" src="assets/img/logo.png"> -->
+            <img src="assets/img/logo.png">
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Inicio</a></li>
+
+                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/muestrotodos">Ver todos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/paginaprofesor">Atrás</a></li> -->
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="display: flex;">
+        <div style="margin-top: 150px ; background-color: rgba(255,255,255,0.6); border-radius: 5px;" class=" col-4 offset-md-2">
+
+            <div class="card-body">
+
+                <!-- <div class="form-group">ID
+                    <input type="number" name="idcontenido" [(ngModel)]="contenido.idcontenido" placeholder="Ingrese el id" class="form-control" autofocus>
+
+                </div> -->
+
+                <div class="form-group">Nombre:
+                    <input type="text" name="nombre" [(ngModel)]="profesor.nombre" placeholder="Ingrese Nombre" class="form-control">
+
+                </div>
+                <div class="form-group">Apellido
+                    <input name="apellido" [(ngModel)]="profesor.apellido" placeholder="Ingrese apellido"  class="form-control">
+
+                </div>
+                <div class="form-group">Mail
+                    <input type="mail" name="mail" [(ngModel)]="profesor.mail" placeholder="Ingrese mail" class="form-control">
+
+                </div>
+                <div class="form-group">DNI
+                    <input type="int" name="mail" [(ngModel)]="profesor.dni" placeholder="Ingrese DNI" class="form-control">
+
+                </div>
+                <button class="btn btn-success btn-block" (click)="saveNewProfesor()">
+                        Guardar
+
+                    </button>
+
+
+            </div>
+        </div>
+
+
+
+        <!-- <div class="col-6 " style="margin-top: 150px;">
+            <div class="card card-body text-center" style=" background-color: rgba(255,255,255,0.6); border-radius: 5px;">
+                <h3>{{contenido.idcontenido}}. {{contenido.materia}}</h3>
+                <h4>Descripcion:
+                    <p>{{contenido.descripcion}}</p>
+                </h4>
+                <a href="{{contenido.link}}">{{contenido.link}}</a>
+            </div>
+        </div> -->
+    </div>
+</header>

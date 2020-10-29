@@ -14,7 +14,7 @@ export class AgregarcontenidoComponent implements OnInit {
 //  @HostBinding('class') class='row'; // ---> esto hace que el formulario sea una unica row en toda la pantalla, lo dejo por las dudas
   
   contenido: Contenido = {
-   idcontenido: 0,
+
     descripcion: '',
     link: '',
     materia: '',
