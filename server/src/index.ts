@@ -2,6 +2,7 @@ import express, {Application} from 'express';
 import indexRoutes from "./routes/indexRoutes";
 import indexRoutesProf from "./routesProf/indexRoutesProf";
 import contenidoRoutes from "./routes/contenidoRoutes";
+import materiaRoutes from "./routes/materiaRoutes";
 import profRoutes from "./routesProf/profRoutes";
 import morgan from 'morgan';
 import cors from 'cors';
@@ -27,6 +28,7 @@ config(): void {
 routes(): void {
     this.app.use('/',indexRoutes);
     this.app.use('/api/contenidos', contenidoRoutes);
+    this.app.use('/api/materia', materiaRoutes)
 }
 routesProf(): void {
     this.app.use('/',indexRoutesProf);
