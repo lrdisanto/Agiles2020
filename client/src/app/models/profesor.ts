@@ -1,10 +1,10 @@
 export interface Profesor {
     
-        idprofesor?:number;
+        idprofesor?:string;
         mail:string;
         nombre:string;
         apellido:string;
-        dni:number;       
+        dni:string;       
         
       
         

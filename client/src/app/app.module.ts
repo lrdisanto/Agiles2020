@@ -47,6 +47,9 @@ import { ProfesoresService } from './services/profesores.service';
 import { MostrarasignaturasComponent } from './components/mostrarasignaturas/mostrarasignaturas.component';
 
 
+import { MostrarprofComponent } from './components/mostrarprof/mostrarprof.component';
+
+
 
 const routes: Routes = [
 {path: '', component: PaginainicioComponent},
@@ -60,7 +63,10 @@ const routes: Routes = [
 {path: 'altaalumnos', component: AltaalumnosComponent},
 {path: 'altaprofesor', component: AltaprofesorComponent},
 {path: 'altaasignatura', component: AltaasignaturaComponent},
-{path: 'mostrarasignaturas', component: MostrarasignaturasComponent}
+
+{path: 'mostrarasignaturas', component: MostrarasignaturasComponent},
+{path: 'mostrarprof', component: MostrarprofComponent}
+
 ];
 
 
@@ -70,7 +76,8 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent],
+     
   imports: [
     BrowserModule,
     AppRoutingModule,
