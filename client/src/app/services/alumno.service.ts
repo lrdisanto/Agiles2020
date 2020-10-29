@@ -18,8 +18,8 @@ export class AlumnoService {
       return this.http.get('http://localhost:3000/api/alumno/${id}');
     }
 
-  saveAlumno(profesor: Alumno){
-    return this.http.post('http://localhost:3000/api/alumno', profesor)
+  saveAlumno(alumno: Alumno){
+    return this.http.post('http://localhost:3000/api/alumno', alumno)
   }
 
   deleteAlumno(id:number){
