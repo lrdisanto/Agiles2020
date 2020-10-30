@@ -64,7 +64,7 @@ const routes: Routes = [
 {path: 'altaalumnos', component: AltaalumnosComponent},
 {path: 'altaprofesor', component: AltaprofesorComponent},
 {path: 'altaasignatura', component: AltaasignaturaComponent},
-
+{path: 'muestrotodoalumnos', component: MuestrotodoalumnosComponent},
 {path: 'mostrarasignaturas', component: MostrarasignaturasComponent},
 {path: 'mostrarprof', component: MostrarprofComponent}
 
@@ -77,7 +77,7 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent],
      
   imports: [
     BrowserModule,
