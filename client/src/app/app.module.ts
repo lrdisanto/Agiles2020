@@ -77,7 +77,7 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent, MuestroalumnosComponent],
      
   imports: [
     BrowserModule,
