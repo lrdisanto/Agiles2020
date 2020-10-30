@@ -12,7 +12,7 @@ export class AlumnoService {
   constructor(private http: HttpClient) { }
 
   getAlumnos(){
-    return this.http.get(`${this.API_URI}/alumno/`);
+    return this.http.get('http://localhost:3000/api/alumno');
   }
 
     getAlumno(id: number){
@@ -20,7 +20,7 @@ export class AlumnoService {
     }
 
   saveAlumno(alumno: Alumno){
-    return this.http.post('http://localhost:3000/api/alumno', alumno)
+    return this.http.post('http://localhost:3000/api/alumno', alumno);
   }
 
   deleteAlumno(id:string){
