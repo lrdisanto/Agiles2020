@@ -7,11 +7,8 @@ const express_1 = __importDefault(require("express"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
 const indexRoutesProf_1 = __importDefault(require("./routesProf/indexRoutesProf"));
 const contenidoRoutes_1 = __importDefault(require("./routes/contenidoRoutes"));
-<<<<<<< HEAD
 const altaAlumnoRoutes_1 = __importDefault(require("./routes/altaAlumnoRoutes"));
-=======
 const profRoutes_1 = __importDefault(require("./routesProf/profRoutes"));
->>>>>>> develop
 const morgan_1 = __importDefault(require("morgan"));
 const cors_1 = __importDefault(require("cors"));
 class Server {

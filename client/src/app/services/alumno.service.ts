@@ -7,11 +7,12 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AlumnoService {
+  API_URI = 'http://localhost:3000/api';
 
   constructor(private http: HttpClient) { }
 
   getAlumnos(){
-    return this.http.get('http://localhost:3000/api/alumno');
+    return this.http.get(`${this.API_URI}/alumno/`);
   }
 
     getAlumno(id: number){
@@ -22,8 +23,8 @@ export class AlumnoService {
     return this.http.post('http://localhost:3000/api/alumno', alumno)
   }
 
-  deleteAlumno(id:number){
-    return this.http.delete('http://localhost:3000/api/alumno/${id}');
+  deleteAlumno(id:string){
+    return this.http.delete(`${this.API_URI}/alumno/${id}`);
   }
 
   updateAlumno(id:number, updateAlumno:Alumno ): Observable<any> {

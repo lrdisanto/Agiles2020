@@ -44,6 +44,7 @@ import { AltaprofesorComponent } from './components/altaprofesor/altaprofesor.co
 import { AltaasignaturaComponent } from './components/altaasignatura/altaasignatura.component';
 import { AltaalumnosComponent } from './components/altaalumnos/altaalumnos.component';
 import { ProfesoresService } from './services/profesores.service';
+import { MuestroalumnosComponent } from './components/muestroalumnos/muestroalumnos.component';
 
 
 
@@ -54,7 +55,7 @@ const routes: Routes = [
 {path: 'paginaalumno', component: PaginaalumnoComponent},
 {path: 'muestrotodos', component: MuestrocontenidosComponent},
 {path: 'agregarcontenido', component: AgregarcontenidoComponent},
-{path: 'muestroalumnos', component: MuestrotodoalumnosComponent},
+{path: 'muestroalumnos', component: MuestroalumnosComponent},
 {path: 'administrador', component: AdministradorComponent},
 {path: 'altaalumnos', component: AltaalumnosComponent},
 {path: 'altaprofesor', component: AltaprofesorComponent},
@@ -68,7 +69,7 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MuestroalumnosComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
