@@ -7,19 +7,15 @@
             <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Inicio</a></li>
-
-                    <!-- <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/muestrotodos">Ver todos</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/paginaprofesor">Atrás</a></li> -->
-
-
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/administrador">Atras</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/mostrarprof">Ver Profesores</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container" style="display: flex;">
-        <div style="margin-top: 150px ; background-color: rgba(255,255,255,0.6); border-radius: 5px;" class=" col-4 offset-md-2">
+        <div style="margin-top: 100px; margin-bottom: 150px; background-color: rgba(255,255,255,0.6); border-radius: 5px;" class=" col-4 offset-md-2">
 
             <div class="card-body">
 
@@ -33,7 +29,7 @@
 
                 </div>
                 <div class="form-group">Apellido
-                    <input name="apellido" [(ngModel)]="profesor.apellido" placeholder="Ingrese apellido"  class="form-control">
+                    <input name="apellido" [(ngModel)]="profesor.apellido" placeholder="Ingrese apellido" class="form-control">
 
                 </div>
                 <div class="form-group">Mail
@@ -42,6 +38,10 @@
                 </div>
                 <div class="form-group">DNI
                     <input type="int" name="mail" [(ngModel)]="profesor.dni" placeholder="Ingrese DNI" class="form-control">
+
+                </div>
+                <div class="form-group">Contraseña
+                    <input type="string" name="contraseña" placeholder="Ingrese DNI" class="form-control">
 
                 </div>
                 <button class="btn btn-success btn-block" (click)="saveNewProfesor()">
@@ -55,14 +55,30 @@
 
 
 
-        <!-- <div class="col-6 " style="margin-top: 150px;">
+        <div class="col-6 " style="margin-top: 100px; margin-bottom: 150px;">
             <div class="card card-body text-center" style=" background-color: rgba(255,255,255,0.6); border-radius: 5px;">
-                <h3>{{contenido.idcontenido}}. {{contenido.materia}}</h3>
-                <h4>Descripcion:
-                    <p>{{contenido.descripcion}}</p>
+                <h4>Nombre:
+                    <p>{{profesor.nombre}}</p>
                 </h4>
-                <a href="{{contenido.link}}">{{contenido.link}}</a>
+                <br>
+                <h4>Apellido:
+                    <p>{{profesor.apellido}}</p>
+                </h4>
+                <br>
+                <h4>Mail:
+                    <p>{{profesor.mail}}</p>
+                </h4>
+                <br>
+                <h4>DNI:
+                    <p>{{profesor.dni}}</p>
+                </h4>
+                <br>
+                <h4>Contraseña:
+                    <p></p>
+                </h4>
+
+
             </div>
-        </div> -->
+        </div>
     </div>
 </header>

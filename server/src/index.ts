@@ -1,10 +1,10 @@
 import express, {Application} from 'express';
 import indexRoutes from "./routes/indexRoutes";
 import contenidoRoutes from "./routes/contenidoRoutes"
-
 import altaAlumnoRoutes from "./routes/altaAlumnoRoutes";
 import indexRoutesProf from "./routesProf/indexRoutesProf";
 
+import materiaRoutes from "./routes/materiaRoutes";
 import profRoutes from "./routesProf/profRoutes";
 import morgan from 'morgan';
 import cors from 'cors';
@@ -31,6 +31,7 @@ routes(): void {
     this.app.use('/',indexRoutes);
     this.app.use('/api/contenidos', contenidoRoutes);
     this.app.use('/api/alumno', altaAlumnoRoutes);
+    this.app.use('/api/materia', materiaRoutes)
 }
 routesProf(): void {
     this.app.use('/',indexRoutesProf);
