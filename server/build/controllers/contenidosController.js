@@ -14,15 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 class ContenidosController {
-    list(req, res) {
-        return __awaiter(this, void 0, void 0, function* () {
-            yield database_1.default.query('SELECT * FROM contenidos', function (err, result, fields) {
-                if (err)
-                    throw err;
-                res.json(result);
-            });
-        });
-    }
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
@@ -48,6 +39,24 @@ class ContenidosController {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
             yield database_1.default.query('DELETE FROM contenidos WHERE idcontenido = ?', [id]);
+        });
+    }
+    lau(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('SELECT * FROM contenidos as c INNER JOIN materia as m on c.codigomateria=m.idmateria INNER JOIN profesor as p on p.idprofesor=m.idprofesor where p.idprofesor=1', function (err, result, fields) {
+                if (err)
+                    throw err;
+                res.json(result);
+            });
+        });
+    }
+    alumno(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            yield database_1.default.query('SELECT * FROM contenidos as c INNER JOIN materia as m on c.codigomateria=m.idmateria INNER JOIN profesor as p on p.idprofesor=m.idprofesor where p.idprofesor=1', function (err, result, fields) {
+                if (err)
+                    throw err;
+                res.json(result);
+            });
         });
     }
 }

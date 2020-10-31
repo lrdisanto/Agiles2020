@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ContenidosService } from '../../services/contenidos.service';
 
 @Component({
   selector: 'app-paginaalumno',
@@ -7,8 +8,9 @@ import { Router } from '@angular/router';
   styleUrls: ['paginaalumno.component.scss']
 })
 export class PaginaalumnoComponent{
+  contenidos: any = [];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private contenidosService: ContenidosService ) { }
 
 
   
@@ -16,7 +18,7 @@ export class PaginaalumnoComponent{
   title="Escuela"
   opened = false;
   profesor: {title: string, subtitle: string, avatar: string, content: string, url: string}[] = [
-    {title: 'Matemáticas', subtitle: '1º Grado', avatar:'../../../assets/img/profe5edit.jpg', content: 'Las matemáticas o la matemática (del latín mathematĭca, y este del griego μαθηματικά, transliterado como mathēmatiká, derivado de μάθημα, tr. máthēma. ‘conocimiento’) es una ciencia formal que, partiendo de axiomas y siguiendo el razonamiento lógico, estudia las propiedades y relaciones entre entidades abstractas como números, figuras geométricas, iconos, glifos, o símbolos en general...', url:'../../../assets/img/Matematicas.jpg'},
+    {title: 'Matemática', subtitle: '1º Grado', avatar:'../../../assets/img/profe5edit.jpg', content: 'Las matemáticas o la matemática (del latín mathematĭca, y este del griego μαθηματικά, transliterado como mathēmatiká, derivado de μάθημα, tr. máthēma. ‘conocimiento’) es una ciencia formal que, partiendo de axiomas y siguiendo el razonamiento lógico, estudia las propiedades y relaciones entre entidades abstractas como números, figuras geométricas, iconos, glifos, o símbolos en general...', url:'../../../assets/img/Matematicas.jpg'},
     {title: 'Prácticas del Lenguaje', subtitle: '1º Grado', avatar:'../../../assets/img/profe2edit.jpg', content: 'La idea de prácticas del lenguaje se emplea en el ámbito de la educación para aludir a los contenidos y los ejercicios vinculados a la lectura, la escritura y la comunicación oral. Estas prácticas abarcan desde el conocimiento de las reglas que componen el sistema conocido como lengua hasta el uso de ese código en diversos contextos...', url: '../../../assets/img/pdl.png'},
     {title: 'Cs Sociales', subtitle: '1º Grado',avatar:'../../../assets/img/profe3edit.jpg', content: 'Las ciencias sociales son las ramas de la ciencia relacionadas con la sociedad y el comportamiento humano. Se las distingue de las ciencias naturales y de las ciencias formales. Además, es una denominación genérica para las disciplinas o campos del saber que analizan y tratan distintos aspectos de las relaciones sociales y los grupos de personas que componen la sociedad...', url: '../../../assets/img/cssociales.jpg'},
     {title: 'Cs Naturales', subtitle: '1º Grado', avatar:'../../../assets/img/profe4edit.jpg', content: 'Las ciencias naturales, ciencias de la naturaleza, ciencias físico-naturales o ciencias experimentales son aquellas ciencias que tienen por objeto el estudio de la naturaleza, siguiendo la modalidad del método científico conocida como método empírico-analítico. Son a veces referidas con el término de historia natural.', url: '../../../assets/img/csnaturales.jpg'},
@@ -31,8 +33,20 @@ export class PaginaalumnoComponent{
   ]
 
 
-  vercontenidos() {
-    this.router.navigate(['/muestroalumnos']);
+  vercontenidos(materia: string) {
+    this.contenidosService.getContenidos().subscribe(
+      res => {
+        this.contenidos = res;
+          
+      },
+      err=> {console.error(err);
+       // this.contenidos=[];
+      
+      }
+    )
+    this.router.navigate(['/muestrotodoalumnos']);
+
+    console.log(materia);
 
 
   }

@@ -16,7 +16,7 @@ export class MuestrocontenidosComponent implements OnInit {
 
   ngOnInit(): void {
     
-    this.contenidosService.getContenidos().subscribe(
+    this.contenidosService.getFiltrado().subscribe(
       res => {
         this.contenidos = res;
           
@@ -40,7 +40,6 @@ export class MuestrocontenidosComponent implements OnInit {
 
       err => console.log(err)
     ) 
-    location.reload();
   }
     
 }

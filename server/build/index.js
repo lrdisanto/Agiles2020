@@ -5,9 +5,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const indexRoutes_1 = __importDefault(require("./routes/indexRoutes"));
-const indexRoutesProf_1 = __importDefault(require("./routesProf/indexRoutesProf"));
 const contenidoRoutes_1 = __importDefault(require("./routes/contenidoRoutes"));
 const altaAlumnoRoutes_1 = __importDefault(require("./routes/altaAlumnoRoutes"));
+const indexRoutesProf_1 = __importDefault(require("./routesProf/indexRoutesProf"));
 const materiaRoutes_1 = __importDefault(require("./routes/materiaRoutes"));
 const profRoutes_1 = __importDefault(require("./routesProf/profRoutes"));
 const morgan_1 = __importDefault(require("morgan"));
@@ -29,6 +29,7 @@ class Server {
     routes() {
         this.app.use('/', indexRoutes_1.default);
         this.app.use('/api/contenidos', contenidoRoutes_1.default);
+        this.app.use('/api/contenidos/alumno', contenidoRoutes_1.default);
         this.app.use('/api/alumno', altaAlumnoRoutes_1.default);
         this.app.use('/api/materia', materiaRoutes_1.default);
     }

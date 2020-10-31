@@ -49,6 +49,7 @@ import { MostrarasignaturasComponent } from './components/mostrarasignaturas/mos
 
 
 import { MostrarprofComponent } from './components/mostrarprof/mostrarprof.component';
+import { PruebaComponent } from './components/prueba/prueba.component';
 
 
 
@@ -66,7 +67,8 @@ const routes: Routes = [
 {path: 'altaasignatura', component: AltaasignaturaComponent},
 {path: 'muestrotodoalumnos', component: MuestrotodoalumnosComponent},
 {path: 'mostrarasignaturas', component: MostrarasignaturasComponent},
-{path: 'mostrarprof', component: MostrarprofComponent}
+{path: 'mostrarprof', component: MostrarprofComponent},
+{path: 'prueba', component: PruebaComponent}
 
 ];
 
@@ -77,7 +79,9 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent, AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent, MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent],
+      MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent,
+       AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent,
+        MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent, PruebaComponent],
      
   imports: [
     BrowserModule,

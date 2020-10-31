@@ -19,6 +19,17 @@ export class ContenidosService {
     return this.http.get('http://localhost:3000/api/contenidos');
   }
 
+  getFiltrado() {
+  
+    // return this.http.get('${this.API_URI}/contenidos');
+     return this.http.get('http://localhost:3000/api/contenidos');
+   }
+ 
+getAlumnos() {
+  return this.http.get('http://localhost:3000/api/contenidos/alumnos');
+}
+
+
   getContenido(id: string) {
 
     return this.http.get('http://localhost:3000/api/contenidos/${id}');

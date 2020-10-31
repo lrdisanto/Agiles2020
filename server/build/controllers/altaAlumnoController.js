@@ -14,10 +14,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const database_1 = __importDefault(require("../database"));
 class AltaAlumnoController {
-    index(req, res) {
-        database_1.default.query('DESCRIBE alumno');
-        res.json('alumno');
-    }
     list(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('SELECT * FROM alumno', function (err, result, fields) {
@@ -38,7 +34,7 @@ class AltaAlumnoController {
     create(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             yield database_1.default.query('INSERT INTO alumno set ?', [req.body]);
-            res.json({ message: 'Alumno guardado' });
+            res.json({ text: 'Alumno guardado' });
         });
     }
     update(req, res) {
@@ -52,7 +48,7 @@ class AltaAlumnoController {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;
             yield database_1.default.query('DELETE FROM alumno WHERE idalumno = ?', [id]);
-            res.json({ message: 'El alumno fue borrado' });
+            res.send({ text: 'El alumno fue borrado' });
         });
     }
 }

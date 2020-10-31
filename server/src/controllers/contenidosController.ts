@@ -3,14 +3,7 @@ import pool from '../database';
 
 class ContenidosController {
 
-
-public async list (req: Request,res: Response) {
-    await pool.query('SELECT * FROM contenidos', function(err, result, fields) {
-        if (err) throw err;
-        res.json(result);
-    });
-}
-
+    
 public async getOne( req: Request, res:Response): Promise<void>{
     const {id} = req.params;
     const contenido = await pool.query('SELECT * FROM contenidos WHERE idcontenido= ?',[id]);
@@ -35,7 +28,19 @@ public async update(req: Request, res:Response): Promise<void> {
  }
 
 
+ public async lau (req: Request,res: Response) {
+    await pool.query('SELECT * FROM contenidos as c INNER JOIN materia as m on c.codigomateria=m.idmateria INNER JOIN profesor as p on p.idprofesor=m.idprofesor where p.idprofesor=1', function(err, result, fields) {
+        if (err) throw err;
+        res.json(result);
+    });
+}
 
+public async alumno (req: Request,res: Response) {
+    await pool.query('SELECT * FROM contenidos as c INNER JOIN materia as m on c.codigomateria=m.idmateria INNER JOIN profesor as p on p.idprofesor=m.idprofesor where p.idprofesor=1', function(err, result, fields) {
+        if (err) throw err;
+        res.json(result);
+    });
+}
 
 }
 

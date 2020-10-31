@@ -22,13 +22,17 @@
 
             <div class="card-body">
 
-               
+
 
                 <div class="form-group">Nombre de la asignatura
                     <input type="text" name="materia" [(ngModel)]="materia.nombre" placeholder="Ingrese el nombre la asignatura" class="form-control">
 
                 </div>
-                
+                <div class="form-group">DNI PROFESOR
+                    <input type="text" name="materia" [(ngModel)]="materia.idprofesor" placeholder="Ingrese el nombre la asignatura" class="form-control">
+
+                </div>
+
                 <div class="form-group">Año al que pertenece
                     <input type="number" name="anio" [(ngModel)]="materia.idanio" placeholder="Ingrese el año al que pertenece" class="form-control">
 
@@ -46,14 +50,14 @@
 
         <div class="col-6 " style="margin-top: 150px;">
             <div class="card card-body text-center" style=" background-color: rgba(255,255,255,0.6); border-radius: 5px;">
-               
+
                 <h4>Asignatura
                     <p>{{materia.nombre}}</p>
                 </h4>
                 <h3>Año al que pertenece
                     <p>{{materia.idanio}}° grado</p>
                 </h3>
-                
+
             </div>
         </div>
     </div>

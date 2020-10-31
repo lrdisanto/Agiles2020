@@ -11,11 +11,13 @@ class ContenidosRoutes {
         this.config();
     }
     config() {
-        this.router.get('/', contenidosController_1.default.list);
+        this.router.get('/', contenidosController_1.default.lau);
         this.router.post('/', contenidosController_1.default.create);
         this.router.delete('/:id', contenidosController_1.default.delete);
         this.router.put('/:id', contenidosController_1.default.update);
         this.router.get('/:id', contenidosController_1.default.getOne);
+        this.router.get('/alumno', contenidosController_1.default.alumno);
+        this.router.post('/alumno', contenidosController_1.default.create);
     }
 }
 const contenidosRoutes = new ContenidosRoutes();
