@@ -18,8 +18,45 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
- 
+  onLogin(){
+    console.log('Form->', this.loginForm.value);
+  }
+
+  paginaalumno(){
+     const usuario = (document.getElementById("emailprofesor")as HTMLTextAreaElement).value;
+     console.log(usuario);
+     var clave= (document.getElementById("claveprofesor") as HTMLTextAreaElement).value;
+     console.log(clave);
+
+     if (usuario === 'alumno@gmail.com' && clave === '123456') {
+      this.router.navigate(['/paginaalumno']);
+
+     }
+
+   else if (usuario === 'profesor@gmail.com' && clave === '123456') {
+    this.router.navigate(['/paginaprofesor']);
+
+
+   }
+   
+
+  }
+  
+     navegaralogin(){
+   this.router.navigate(['/login']);
+ }
+ navegaralogin2(){
+   this.router.navigate(['/logindos']);
+ }
+
+ navegarhome() {
+   this.router.navigate(['']);
+ }
+
 }
+
+
+
 
 
 
