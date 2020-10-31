@@ -29,4 +29,8 @@ export class CabeceraComponent implements OnInit {
    this.router.navigate(['']);
  }
 
+ administrador() {
+   this.router.navigate(['administrador']);
+ }
+
 }
