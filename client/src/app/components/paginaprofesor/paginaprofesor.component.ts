@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MateriaService } from 'src/app/services/materia.service';
 
 @Component({
   selector: 'app-paginaprofesor',
@@ -8,10 +9,29 @@ import { Router } from '@angular/router';
 })
 export class PaginaprofesorComponent  {
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private materiasService: MateriaService) { }
 
   ngOnInit(): void {
+    this.getmateriasfiltradas();
+
   }
+
+  getmateriasfiltradas() {
+    var idanioprofesor=localStorage.getItem("idanioprofesor");
+      this.materiasService.getMateriabyProfesor(idanioprofesor).subscribe(
+        (data: any) => {
+          console.log(data);
+        }
+      )
+    
+    }
+  
+    
+  
+  
+  
+
+
   subircontenidos(){
     this.router.navigate(['/agregarcontenido']);
 

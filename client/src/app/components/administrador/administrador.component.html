@@ -1,78 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
 </head>
+
 <body>
-    
-        
-        <nav style="margin-top: 0;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-            <div class="container">
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ml-auto my-2 my-lg-0">
-                        <a class="salir" href="/">
-                            <i class="fas fa-3x fa-sign-out-alt" style="color: white; "></i>
-                            <p style="text-align: center; color: #ffff;">Salir</p>
-                        </a>
 
 
-                    </ul>
-                </div>
+    <nav style="margin-top: 0;" class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <a class="salir" href="/login">
+                        <i class="fas fa-3x fa-sign-out-alt" style="color: white; "></i>
+                        <p style="text-align: center; color: #ffff;">Salir</p>
+                    </a>
 
+
+                </ul>
             </div>
 
+        </div>
 
-        </nav>
-        <app-cabecerados></app-cabecerados>
 
-        <div class="titulo-container">
-            <h1 class="letracursada">¡Bienvenido Administrador!</h1>
-           
+    </nav>
+    <app-cabecerados></app-cabecerados>
+
+    <div class="titulo-container">
+        <h1 class="letracursada">¡Bienvenido Administrador!</h1>
+
     </div>
-    
+
     <div class="fondo">
-            <mat-card class="cards">
-                <mat-card-title>ALTA ALUMNOS</mat-card-title>
-                <img mat-card-image src="../../../assets/img/altaEstudiante.jpg" alt="">
-                <mat-card-content>
-                    <p>Aquí podrá gestionar el alta de los alumnos que concurren a nuestro colegio</p>
-                </mat-card-content>
-                <mat-card-actions>
-                <button class="btn btn-danger mx-2" (click)="altaalumnos()">ADMINISTRAR</button>
-               
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card class="cards">
-                <mat-card-title>ALTA PROFESORES</mat-card-title>
-                <img mat-card-image src="../../../assets/img/altaProfesor.jpg" alt="">
-                <mat-card-content>
-                   <p>Aquí podrá gestionar el alta de los profesores de nuestro colegio</p>
-                </mat-card-content>
-                <mat-card-actions>
-                <button class="btn btn-danger mx-2" (click)="altaprofesor()">ADMINISTRAR</button>
-                </mat-card-actions>
-            </mat-card>
-
-            <mat-card class="cards">
-                <mat-card-title>MATERIAS</mat-card-title>
-                <img mat-card-image src="../../../assets/img/altaMaterias.jpg" alt="">
-                <mat-card-content> 
-                    <p>Aquí podrá gestionar el alta de las materias que se dictan en nuestro colegio</p>
+        <mat-card class="cards">
+            <mat-card-title>ALTA ALUMNOS</mat-card-title>
+            <img mat-card-image src="../../../assets/img/altaEstudiante.jpg" alt="">
+            <mat-card-content>
+                <p>Aquí podrá gestionar el alta de los alumnos que concurren a nuestro colegio</p>
             </mat-card-content>
-                
-                <mat-card-actions>
+            <mat-card-actions>
+                <button class="btn btn-danger mx-2" (click)="altaalumnos()">ADMINISTRAR</button>
+
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="cards">
+            <mat-card-title>ALTA PROFESORES</mat-card-title>
+            <img mat-card-image src="../../../assets/img/altaProfesor.jpg" alt="">
+            <mat-card-content>
+                <p>Aquí podrá gestionar el alta de los profesores de nuestro colegio</p>
+            </mat-card-content>
+            <mat-card-actions>
+                <button class="btn btn-danger mx-2" (click)="altaprofesor()">ADMINISTRAR</button>
+            </mat-card-actions>
+        </mat-card>
+
+        <mat-card class="cards">
+            <mat-card-title>MATERIAS</mat-card-title>
+            <img mat-card-image src="../../../assets/img/altaMaterias.jpg" alt="">
+            <mat-card-content>
+                <p>Aquí podrá gestionar el alta de las materias que se dictan en nuestro colegio</p>
+            </mat-card-content>
+
+            <mat-card-actions>
                 <button class="btn btn-danger mx-2" (click)="altaasignaturas()">ADMINISTRAR</button>
-                </mat-card-actions>
-            </mat-card>
+            </mat-card-actions>
+        </mat-card>
 
     </div>
 
 
 </body>
+
 </html>
 
 

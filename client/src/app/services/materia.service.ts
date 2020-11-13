@@ -13,6 +13,16 @@ export class MateriaService {
 
   constructor( private http: HttpClient) { }
 
+  getMateriabyANIO(idanio) {
+    return this.http.get(`http://localhost:3000/api/materia/getmateria/${idanio}`);
+
+  }
+
+  getMateriabyProfesor(idprofesor) {
+    return this.http.get(`http://localhost:3000/api/materia/getmateriaprofesor/${idprofesor}`);
+
+  }
+
   getMaterias() {
   
    // return this.http.get('${this.API_URI}/materia');

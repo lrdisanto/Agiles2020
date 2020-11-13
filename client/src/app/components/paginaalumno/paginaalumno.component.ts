@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ContenidosService } from '../../services/contenidos.service';
+import { MateriaService } from '../../services/materia.service';
 
 @Component({
   selector: 'app-paginaalumno',
@@ -10,11 +11,39 @@ import { ContenidosService } from '../../services/contenidos.service';
 export class PaginaalumnoComponent{
   contenidos: any = [];
 
-  constructor(private router: Router, private contenidosService: ContenidosService ) { }
+  constructor(private router: Router, private contenidosService: ContenidosService, private materiasService: MateriaService ) { }
 
+  ngOnInit(): void {
+    this.getmateriasfiltradas();
+  }
+  
+
+  getmateriasfiltradas() {
+  var idanio=localStorage.getItem("idanio");
+    this.materiasService.getMateriabyANIO(idanio).subscribe(
+      (data: any) => {
+        console.log(data);
+      }
+    )
+  
+  }
 
   
-  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   title="Escuela"
   opened = false;
   profesor: {title: string, subtitle: string, avatar: string, content: string, url: string}[] = [

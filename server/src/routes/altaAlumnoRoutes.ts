@@ -14,6 +14,8 @@ import altaAlumnoController from '../controllers/altaAlumnoController';
         this.router.delete('/:id', altaAlumnoController.delete );
         this.router.put('/:id', altaAlumnoController.update );
         this.router.get('/:id', altaAlumnoController.getOne);
+        this.router.get('/getalumno/:email', altaAlumnoController.getID);
+
     }
 }
 
