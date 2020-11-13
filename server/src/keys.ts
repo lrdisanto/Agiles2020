@@ -4,8 +4,8 @@ export default {
         user: 'root',
         password: '',
         database: 'contenidos_db',
-        
       
         
     }
 }
+
