@@ -11,6 +11,10 @@ export class AlumnoService {
 
   constructor(private http: HttpClient) { }
 
+  getalumnobyID(email) {
+    return this.http.get(`http://localhost:3000/api/alumno/getalumno/${email}`);
+  }
+
   getAlumnos(){
     return this.http.get('http://localhost:3000/api/alumno');
   }

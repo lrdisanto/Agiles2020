@@ -13,6 +13,16 @@ public async list (req: Request,res: Response) {
     });
 }
 
+
+public async getID (req: Request, res: Response): Promise<void> {
+    const email = req.params.email.toString();
+     await pool.query('SELECT * FROM alumno WHERE mail=?',[email],function(err, data) {
+         res.json({alumno:data});
+     });
+    
+}
+
+
 public async getOne( req: Request, res:Response): Promise<void>{
     const {id} = req.params;
     const alumno = await pool.query('SELECT * FROM alumno WHERE idalumno= ?',[id]);

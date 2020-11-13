@@ -10,6 +10,16 @@ class ProfController {
             });
         }
 
+
+        public async getprofID (req: Request, res: Response): Promise<void> {
+            const email = req.params.email.toString();
+             await pool.query('SELECT * FROM profesor WHERE mail=?',[email],function(err, data) {
+                 res.json({alumno:data});
+             });
+            
+        }
+
+
         public async getOne( req: Request, res:Response): Promise<void>{
             const {id} = req.params;
             const prof = await pool.query('SELECT * FROM profesor WHERE idprofesor= ?',[id]);

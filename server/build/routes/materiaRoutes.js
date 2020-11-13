@@ -16,6 +16,8 @@ class MateriaRoutes {
         this.router.delete('/:id', materiaController_1.default.delete);
         this.router.put('/:id', materiaController_1.default.update);
         this.router.get('/:id', materiaController_1.default.getOne);
+        this.router.get('/getmateria/:idanio', materiaController_1.default.getMaterias);
+        this.router.get('/getmateriaprofesor/:idprofesor', materiaController_1.default.getMateriasProfesor);
     }
 }
 const materiaRoutes = new MateriaRoutes();

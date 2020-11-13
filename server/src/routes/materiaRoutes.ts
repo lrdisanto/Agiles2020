@@ -14,6 +14,9 @@ this.config();
     this.router.delete('/:id',materiaController.delete);
     this.router.put('/:id',materiaController.update);
     this.router.get('/:id',materiaController.getOne);
+    this.router.get('/getmateria/:idanio', materiaController.getMaterias);
+    this.router.get('/getmateriaprofesor/:idprofesor', materiaController.getMateriasProfesor);
+
 
 
 

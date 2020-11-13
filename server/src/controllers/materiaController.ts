@@ -11,6 +11,25 @@ public async list (req: Request,res: Response) {
     });
 }
 
+
+public async getMaterias (req: Request, res: Response): Promise<void> {
+    const idanio = req.params.idanio.toString();
+     await pool.query('SELECT * FROM materia WHERE idanio=?',[idanio],function(err, data) {
+         res.json({materias:data});
+     });
+    
+}
+
+public async getMateriasProfesor (req: Request, res: Response): Promise<void> {
+    const idprofesor = req.params.idprofesor.toString();
+     await pool.query('SELECT * FROM materia WHERE idprofesor=?',[idprofesor],function(err, data) {
+         res.json({materias:data});
+     });
+    
+}
+
+
+
 public async getOne( req: Request, res:Response): Promise<void>{
     const {id} = req.params;
     const materia = await pool.query('SELECT * FROM materia WHERE idmateria= ?',[id]);

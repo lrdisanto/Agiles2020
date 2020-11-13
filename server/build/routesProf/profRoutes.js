@@ -16,6 +16,7 @@ class ProfRoutes {
         this.router.delete('/:id', profController_1.default.delete);
         this.router.put('/:id', profController_1.default.update);
         this.router.get('/:id', profController_1.default.getOne);
+        this.router.get('/getprofesor/:email', profController_1.default.getprofID);
     }
 }
 const profRoutes = new ProfRoutes();

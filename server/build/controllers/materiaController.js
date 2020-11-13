@@ -23,6 +23,22 @@ class MateriaController {
             });
         });
     }
+    getMaterias(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const idanio = req.params.idanio.toString();
+            yield database_1.default.query('SELECT * FROM materia WHERE idanio=?', [idanio], function (err, data) {
+                res.json({ materias: data });
+            });
+        });
+    }
+    getMateriasProfesor(req, res) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const idprofesor = req.params.idprofesor.toString();
+            yield database_1.default.query('SELECT * FROM materia WHERE idprofesor=?', [idprofesor], function (err, data) {
+                res.json({ materias: data });
+            });
+        });
+    }
     getOne(req, res) {
         return __awaiter(this, void 0, void 0, function* () {
             const { id } = req.params;

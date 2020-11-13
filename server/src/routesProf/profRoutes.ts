@@ -14,6 +14,8 @@ import profController from '../controllersProf/profController';
         this.router.delete('/:id', profController.delete );
         this.router.put('/:id', profController.update );
         this.router.get('/:id', profController.getOne);
+        this.router.get('/getprofesor/:email', profController.getprofID);
+
         
 
     }

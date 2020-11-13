@@ -16,6 +16,7 @@ class AltaALumnoRoutes {
         this.router.delete('/:id', altaAlumnoController_1.default.delete);
         this.router.put('/:id', altaAlumnoController_1.default.update);
         this.router.get('/:id', altaAlumnoController_1.default.getOne);
+        this.router.get('/getalumno/:email', altaAlumnoController_1.default.getID);
     }
 }
 const altaAlumnoRoutes = new AltaALumnoRoutes();

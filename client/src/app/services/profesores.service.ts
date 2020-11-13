@@ -11,6 +11,10 @@ export class ProfesoresService {
 
   constructor(private http: HttpClient) { }
 
+  getprofbyID(email) {
+    return this.http.get(`http://localhost:3000/api/profesor/getprofesor/${email}`);
+  }
+
   getProfesores(){
     return this.http.get('http://localhost:3000/api/profesor');
   }
