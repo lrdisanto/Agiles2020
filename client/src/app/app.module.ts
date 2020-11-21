@@ -39,7 +39,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { CabeceradosComponent } from './components/cabecerados/cabecerados.component';
 import { MuestrotodoalumnosComponent } from './components/muestrotodoalumnos/muestrotodoalumnos.component';
 import { UrlsPipe } from './components/urls.pipe';
-<<<<<<< HEAD
 import { AdministradorComponent } from './components/administrador/administrador.component';
 import { AltaprofesorComponent } from './components/altaprofesor/altaprofesor.component';
 import { AltaasignaturaComponent } from './components/altaasignatura/altaasignatura.component';
@@ -52,9 +51,11 @@ import { MostrarasignaturasComponent } from './components/mostrarasignaturas/mos
 import { MostrarprofComponent } from './components/mostrarprof/mostrarprof.component';
 import { PruebaComponent } from './components/prueba/prueba.component';
 import { MapaComponent } from './components/mapa/mapa.component';
-=======
 import { Paginaalumnos2Component } from './paginaalumnos2/paginaalumnos2.component';
->>>>>>> origin/fran
+
+import { AgregarnovedadComponent } from './components/agregarnovedad/agregarnovedad.component';
+import { MostrarnovedadesComponent } from './components/mostrarnovedades/mostrarnovedades.component';
+
 
 
 
@@ -65,7 +66,7 @@ const routes: Routes = [
 {path: 'paginaalumno', component: PaginaalumnoComponent},
 {path: 'muestrotodos', component: MuestrocontenidosComponent},
 {path: 'agregarcontenido', component: AgregarcontenidoComponent},
-<<<<<<< HEAD
+
 {path: 'muestroalumnos', component: MuestroalumnosComponent},
 {path: 'administrador', component: AdministradorComponent},
 {path: 'altaalumnos', component: AltaalumnosComponent},
@@ -75,12 +76,14 @@ const routes: Routes = [
 {path: 'mostrarasignaturas', component: MostrarasignaturasComponent},
 {path: 'mostrarprof', component: MostrarprofComponent},
 {path: 'prueba', component: PruebaComponent},
-{path: 'mapa', component: MapaComponent}
+{path: 'mapa', component: MapaComponent},
+{path: 'agregarnovedades', component:AgregarnovedadComponent},
+{path: 'mostrarnovedades', component:MostrarnovedadesComponent},
 
-=======
+
 {path: 'muestroalumnos', component: MuestrotodoalumnosComponent},
 {path: 'paginaalumnos2', component: Paginaalumnos2Component}
->>>>>>> origin/fran
+
 ];
 
 
@@ -90,14 +93,12 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-<<<<<<< HEAD
+
       MuestrotodoalumnosComponent, UrlsPipe, AdministradorComponent,
        AltaprofesorComponent, AltaasignaturaComponent, AltaalumnosComponent,
-        MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent, PruebaComponent, MapaComponent],
-     
-=======
-      MuestrotodoalumnosComponent, UrlsPipe, Paginaalumnos2Component],
->>>>>>> origin/fran
+        MostrarasignaturasComponent, MostrarprofComponent, MuestroalumnosComponent, PruebaComponent, MapaComponent, PruebaComponent, AgregarnovedadComponent, MostrarnovedadesComponent,
+       Paginaalumnos2Component],
+
   imports: [
     BrowserModule,
     AppRoutingModule,

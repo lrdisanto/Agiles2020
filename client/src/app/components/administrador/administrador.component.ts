@@ -24,6 +24,9 @@ import { Router } from '@angular/router';
       this.router.navigate(['altaasignatura']);
     }
     
+    agregarnovedad(){
+      this.router.navigate(['agregarnovedades'])
+    }
     
 
  /*  sistema: {title: string, content: string, url: string, func}[] = [
