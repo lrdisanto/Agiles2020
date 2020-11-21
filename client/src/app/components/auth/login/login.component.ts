@@ -44,6 +44,20 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/paginaalumno']);
 
      }
+else if ( usuario === 'eri@gmail.com' && clave === '123456' ){
+  this.alumnosService.getalumnobyID(usuario).subscribe(
+    (data: any) => {
+      console.log(usuario);
+      localStorage.setItem("idalumno", data.alumno[0].idalumno);
+      localStorage.setItem("idanio", data.alumno[0].idanio);
+
+     console.log(data);
+}
+  )
+  this.router.navigate(['/paginaalumno']);
+}
+
+     
 
    else if (usuario === 'profesor@gmail.com' && clave === '123456') {
      this.profesorservice.getprofbyID(usuario).subscribe(

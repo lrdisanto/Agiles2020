@@ -2590,37 +2590,37 @@ fieldset:disabled a.btn {
 
 .btn-success {
     color: #fff;
-    background-color: #ee3e0d;
-    border-color: #ee3e0d;
+    background-color: #28a745;
+    border-color: #28a745;
 }
 
 .btn-success:hover {
     color: #fff;
-    background-color: #ee3e0d;
-    border-color: #ee3e0d;
+    background-color: #218838;
+    border-color: #1e7e34;
 }
 
 .btn-success:focus,
 .btn-success.focus {
     color: #fff;
-    background-color: #ee3e0d;
-    border-color: #ee3e0d;
+    background-color: #218838;
+    border-color: #1e7e34;
     box-shadow: 0 0 0 0.2rem rgba(72, 180, 97, 0.5);
 }
 
 .btn-success.disabled,
 .btn-success:disabled {
     color: #fff;
-    background-color: #ee3e0d;
-    border-color: #ee3e0d;
+    background-color: #28a745;
+    border-color: #28a745;
 }
 
 .btn-success:not(:disabled):not(.disabled):active,
 .btn-success:not(:disabled):not(.disabled).active,
 .show>.btn-success.dropdown-toggle {
     color: #fff;
-    background-color: #ee3e0d;
-    border-color: #ee3e0d;
+    background-color: #1e7e34;
+    border-color: #1c7430;
 }
 
 .btn-success:not(:disabled):not(.disabled):active:focus,
@@ -10208,7 +10208,7 @@ hr.light {
 header.masthead {
     padding-top: 10rem;
     padding-bottom: calc(10rem - 4.5rem);
-    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/../../../assets/img/bg-masthead.jpg");
+    background: linear-gradient(to bottom, rgba(92, 77, 66, 0.8) 0%, rgba(92, 77, 66, 0.8) 100%), url("/../../../assets/img/home-bg.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: scroll;
