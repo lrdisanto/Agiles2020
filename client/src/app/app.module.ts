@@ -39,6 +39,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { CabeceradosComponent } from './components/cabecerados/cabecerados.component';
 import { MuestrotodoalumnosComponent } from './components/muestrotodoalumnos/muestrotodoalumnos.component';
 import { UrlsPipe } from './components/urls.pipe';
+import { Paginaalumnos2Component } from './paginaalumnos2/paginaalumnos2.component';
 
 
 
@@ -49,7 +50,8 @@ const routes: Routes = [
 {path: 'paginaalumno', component: PaginaalumnoComponent},
 {path: 'muestrotodos', component: MuestrocontenidosComponent},
 {path: 'agregarcontenido', component: AgregarcontenidoComponent},
-{path: 'muestroalumnos', component: MuestrotodoalumnosComponent}
+{path: 'muestroalumnos', component: MuestrotodoalumnosComponent},
+{path: 'paginaalumnos2', component: Paginaalumnos2Component}
 ];
 
 
@@ -59,7 +61,7 @@ const routes: Routes = [
      CabeceraComponent, FooterComponent, ContactComponent, HeaderComponent,
      PortfolioComponent, MuestrocontenidosComponent,
      AgregarcontenidoComponent, CabeceradosComponent,
-      MuestrotodoalumnosComponent, UrlsPipe],
+      MuestrotodoalumnosComponent, UrlsPipe, Paginaalumnos2Component],
   imports: [
     BrowserModule,
     AppRoutingModule,

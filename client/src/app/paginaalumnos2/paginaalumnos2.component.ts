@@ -2,15 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-paginaalumno',
-  templateUrl: 'paginaalumno.component.html',
-  styleUrls: ['paginaalumno.component.scss']
+  selector: 'app-paginaalumnos2',
+  templateUrl: './paginaalumnos2.component.html',
+  styleUrls: ['./paginaalumnos2.component.scss']
 })
+export class Paginaalumnos2Component {
 
-export class PaginaalumnoComponent{
 
-
-  constructor(private router: Router) { }
+constructor(private router: Router) { }
 
 
   
@@ -38,11 +37,4 @@ export class PaginaalumnoComponent{
 
 
   }
-
 }
-
-
-
-
- 
-
