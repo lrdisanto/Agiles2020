@@ -106,15 +106,15 @@
 
 
         <div class="content" ng-class="{show: show}" fxLayout="row wrap" fxLayoutGap="16px grid">
-            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let materia of materias">
                 <mat-card class="materias">
                     <mat-card-header>
                         <img mat-card-avatar src="../../../assets/img/profe7edit.jpg">
-                        <mat-card-title>Matematicas</mat-card-title>
-                        <mat-card-subtitle>1° grado</mat-card-subtitle>
+                        <mat-card-title>{{materia.nombre}}</mat-card-title>
+                        <mat-card-subtitle>{{materia.idanio}} año</mat-card-subtitle>
                     </mat-card-header>
 
-                    <img mat-card-image src="../../../assets/img/Matematicas.jpg">
+                    <img mat-card-image [src]="materia.imagen">
 
 
                     <mat-card-actions>

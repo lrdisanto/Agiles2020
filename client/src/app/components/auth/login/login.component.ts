@@ -25,7 +25,6 @@ export class LoginComponent implements OnInit {
   }
 
   paginaalumno(){
-<<<<<<< HEAD
      const usuario = (document.getElementById("emailprofesor")as HTMLTextAreaElement).value;
     //  console.log(usuario);
      var clave= (document.getElementById("claveprofesor") as HTMLTextAreaElement).value;
@@ -53,6 +52,7 @@ export class LoginComponent implements OnInit {
          localStorage.setItem("idprofesor", data.alumno[0].idprofesor);
          console.log("el id del profesor es", data);
        }
+      
      )
     this.router.navigate(['/paginaprofesor']);
 
@@ -62,19 +62,10 @@ export class LoginComponent implements OnInit {
      this.router.navigate(['/administrador']);
    }
    
-=======
-    var usuario = (document.getElementById("emailprofesor")as HTMLTextAreaElement).value;
-     console.log(usuario);
-     var clave= (document.getElementById("claveprofesor") as HTMLTextAreaElement).value;
-     console.log(clave);
+  else if (usuario === 'jose@gmail.com' && clave === '123456') {
+    this.router.navigate(['/paginaalumno']);}
 
-    if (usuario === 'jose@gmail.com' && clave === '123456') {
-      this.router.navigate(['/paginaalumno']);
-
-    }
->>>>>>> origin/fran
-
-    if (usuario === 'pamela@gmail.com' && clave === '123456') {
+   else if (usuario === 'pamela@gmail.com' && clave === '123456') {
       this.router.navigate(['/paginaalumnos2']);
     }
     else{
