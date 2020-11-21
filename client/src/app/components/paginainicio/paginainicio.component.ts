@@ -1,10 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+
 @Component({
   selector: 'app-paginainicio',
   templateUrl: './paginainicio.component.html',
-  styleUrls: ['./paginainicio.component.css']
+  styleUrls: ['./paginainicio.component.css'],
+  
 })
 export class PaginainicioComponent implements OnInit {
 
@@ -34,3 +36,4 @@ administrador() {
   this.router.navigate(['administrador']);
 }
 }
+
