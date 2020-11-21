@@ -19,7 +19,7 @@ export class MapaComponent implements OnInit {
     container: 'mapa', // container id
     style: 'mapbox://styles/mapbox/streets-v11',
     center: [-58.3125516,-34.6980005], // starting position
-    zoom: 15 // starting zoom
+    zoom: 14 // starting zoom
     });
 
     this.crearMarcador(-58.3125516,-34.6980005);

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { toJSDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-calendar';
 import { ContenidosService } from '../../services/contenidos.service';
 import { MateriaService } from '../../services/materia.service';
 
@@ -9,8 +10,9 @@ import { MateriaService } from '../../services/materia.service';
   styleUrls: ['paginaalumno.component.scss']
 })
 export class PaginaalumnoComponent{
-  contenidos: any = [];
+  materias: any = [];
 
+  contenidos: any = [];
   constructor(private router: Router, private contenidosService: ContenidosService, private materiasService: MateriaService ) { }
 
   ngOnInit(): void {
@@ -19,11 +21,19 @@ export class PaginaalumnoComponent{
   
 
   getmateriasfiltradas() {
+    
   var idanio=localStorage.getItem("idanio");
     this.materiasService.getMateriabyANIO(idanio).subscribe(
-      (data: any) => {
-        console.log(data);
+      data => {
+         this.materias = data['materias'];
+        console.log(this.materias);
+      },
+      err => {
+        console.error(err);
       }
+        // console.log(data);
+
+      
     )
   
   }

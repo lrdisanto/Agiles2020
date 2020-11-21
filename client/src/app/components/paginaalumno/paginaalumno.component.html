@@ -31,23 +31,23 @@
         <!-- </mat-toolbar> -->
 
         <div class="content" ng-class="{show: show}" fxLayout="row wrap" fxLayoutGap="16px grid">
-            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let profesores of profesor">
+            <div fxFlex="25%" fxFlex.xs="100%" fxFlex.sm="33%" *ngFor="let materia of materias">
                 <mat-card class="materias">
                     <mat-card-header>
-                        <img mat-card-avatar [src]="profesores.avatar" class="avatarMateria">
-                        <mat-card-title>{{profesores.title}}</mat-card-title>
-                        <mat-card-subtitle>{{profesores.subtitle}}</mat-card-subtitle>
+                        <img mat-card-avatar [src]="" class="avatarMateria">
+                        <mat-card-title>{{materia.nombre}}</mat-card-title>
+                        <mat-card-subtitle>{{materia.descripcion}}</mat-card-subtitle>
                     </mat-card-header>
 
-                    <img mat-card-image [src]="profesores.url" alt="Photo of {{profesores.title}}">
+                    <img mat-card-image [src]="materia.imagen">
                     <mat-card-content>
                         <p>
-                            <b>{{profesores.content}}</b>
+                            <!-- <b>Contenidos</b> -->
                         </p>
                     </mat-card-content>
 
                     <mat-card-actions>
-                        <button style="background-color: #EEB391;" (click)="vercontenidos(profesores.title)" class="btn btn-primary" mat-button>VER CONTENIDO</button>
+                        <button style="background-color: #EEB391;" (click)="vercontenidos(materia.nombre)" class="btn btn-primary" mat-button>VER CONTENIDO</button>
                     </mat-card-actions>
                 </mat-card>
             </div>

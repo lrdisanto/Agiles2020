@@ -52,6 +52,7 @@ export class LoginComponent implements OnInit {
          localStorage.setItem("idprofesor", data.alumno[0].idprofesor);
          console.log("el id del profesor es", data);
        }
+      
      )
     this.router.navigate(['/paginaprofesor']);
 

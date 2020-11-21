@@ -8,7 +8,7 @@ import { MateriaService } from 'src/app/services/materia.service';
   styleUrls: ['./paginaprofesor.component.scss']
 })
 export class PaginaprofesorComponent  {
-
+materias: any = [];
   constructor(private router:Router, private materiasService: MateriaService) { }
 
   ngOnInit(): void {
@@ -20,7 +20,8 @@ export class PaginaprofesorComponent  {
     var idanioprofesor=localStorage.getItem("idanioprofesor");
       this.materiasService.getMateriabyProfesor(idanioprofesor).subscribe(
         (data: any) => {
-          console.log(data);
+          this.materias = data.materias;
+          console.log(this.materias);
         }
       )
     
