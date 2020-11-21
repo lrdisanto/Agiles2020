@@ -28,9 +28,11 @@
                     <input type="text" name="materia" [(ngModel)]="materia.nombre" placeholder="Ingrese el nombre la asignatura" class="form-control">
 
                 </div>
-                <div class="form-group">DNI PROFESOR
-                    <input type="text" name="materia" [(ngModel)]="materia.idprofesor" placeholder="Ingrese el nombre la asignatura" class="form-control">
-
+                <div class="form-group">PROFESOR
+                    <select name="select" class="form-control">
+                        <option value="0">Selecciona una opción</option>
+                        <option value={{profesor.nombre}}{{profesor.apellido}} *ngFor="let profesor of profesor">{{profesor.nombre}} {{profesor.apellido}}</option> 
+                      </select>
                 </div>
 
                 <div class="form-group">Año al que pertenece
