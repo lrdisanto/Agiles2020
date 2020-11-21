@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { toJSDate } from '@ng-bootstrap/ng-bootstrap/datepicker/ngb-calendar';
 import { ContenidosService } from '../../services/contenidos.service';
 import { MateriaService } from '../../services/materia.service';
+import { AlumnoService } from '../../services/alumno.service';
 
 @Component({
   selector: 'app-paginaalumno',
@@ -11,33 +12,54 @@ import { MateriaService } from '../../services/materia.service';
 })
 
 export class PaginaalumnoComponent{
+  
   materias: any = [];
+  alumnos: any = [];
+  nombrealumno=localStorage.getItem("nombre");
+  apellidoalumno=localStorage.getItem("apellido");
+  añoalumno = localStorage.getItem("idanio");
+  mailalumno= localStorage.getItem("mail");
 
   contenidos: any = [];
-  constructor(private router: Router, private contenidosService: ContenidosService, private materiasService: MateriaService ) { }
+
+  
+
+
+  constructor(private router: Router, private contenidosService: ContenidosService, private materiasService: MateriaService, private alumnosservice: AlumnoService ,) { }
 
   ngOnInit(): void {
+    
     this.getmateriasfiltradas();
+    var nombrealumno =localStorage.getItem("nombre");
+  
+    console.log(nombrealumno);
   }
   
 
   getmateriasfiltradas() {
-    
   var idanio=localStorage.getItem("idanio");
-    this.materiasService.getMateriabyANIO(idanio).subscribe(
+  this.materiasService.getMateriabyANIO(idanio).subscribe(
       data => {
          this.materias = data['materias'];
         console.log(this.materias);
       },
       err => {
         console.error(err);
+
+        
       }
         // console.log(data);
 
       
-    )
-  
+    );
+   
+
   }
+
+
+
+
+
 
   
 
@@ -90,8 +112,11 @@ export class PaginaalumnoComponent{
 
 
   }
+ 
 
 }
+
+
 
 
 

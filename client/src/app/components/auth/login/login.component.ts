@@ -36,6 +36,9 @@ export class LoginComponent implements OnInit {
            console.log(usuario);
            localStorage.setItem("idalumno", data.alumno[0].idalumno);
            localStorage.setItem("idanio", data.alumno[0].idanio);
+           localStorage.setItem("nombre", data.alumno[0].nombre);
+           localStorage.setItem("apellido", data.alumno[0].apellido);
+           localStorage.setItem("mail", data.alumno[0].mail);
 
           console.log(data);
          }
@@ -50,6 +53,11 @@ else if ( usuario === 'eri@gmail.com' && clave === '123456' ){
       console.log(usuario);
       localStorage.setItem("idalumno", data.alumno[0].idalumno);
       localStorage.setItem("idanio", data.alumno[0].idanio);
+      localStorage.setItem("nombre", data.alumno[0].nombre);
+      localStorage.setItem("apellido", data.alumno[0].apellido);
+      localStorage.setItem("mail", data.alumno[0].mail);
+
+
 
      console.log(data);
 }
