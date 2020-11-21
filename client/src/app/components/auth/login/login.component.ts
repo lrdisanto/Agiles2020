@@ -76,8 +76,17 @@ else if ( usuario === 'eri@gmail.com' && clave === '123456' ){
      this.router.navigate(['/administrador']);
    }
    
+  else if (usuario === 'jose@gmail.com' && clave === '123456') {
+    this.router.navigate(['/paginaalumno']);}
 
+   else if (usuario === 'pamela@gmail.com' && clave === '123456') {
+      this.router.navigate(['/paginaalumnos2']);
+    }
+    else{
+      alert('El usuario o la contraseña son incorrectos');
+    }
   }
+
   
      navegaralogin(){
    this.router.navigate(['/login']);

@@ -4,7 +4,7 @@ import contenidoRoutes from "./routes/contenidoRoutes"
 import altaAlumnoRoutes from "./routes/altaAlumnoRoutes";
 import indexRoutesProf from "./routesProf/indexRoutesProf";
 import pruebaRoutes from "./routes/pruebaRoutes";
-
+import novedadesRoutes from "./routes/novedadesRoutes"
 import materiaRoutes from "./routes/materiaRoutes";
 import profRoutes from "./routesProf/profRoutes";
 import morgan from 'morgan';
@@ -34,7 +34,7 @@ routes(): void {
     this.app.use('/api/contenidos/alumno', contenidoRoutes);
 
 
-
+    this.app.use('/api/novedades', novedadesRoutes);
 
     this.app.use('/api/alumno', altaAlumnoRoutes);
     this.app.use('/api/materia', materiaRoutes);
