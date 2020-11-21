@@ -1,6 +1,6 @@
 export interface Novedades{
 
-    idnovedades:number;
+    idnovedades?:number;
     titulo:string;
     descripcion:string;
     imagen:string;

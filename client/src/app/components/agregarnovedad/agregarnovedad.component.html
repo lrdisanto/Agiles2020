@@ -1,0 +1,66 @@
+<header class="masthead">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
+        <div class="container">
+            <img (click)="inicio()" src="assets/img/logo.png">
+
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button> -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/">Inicio</a></li>
+
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/mostrarnovedades">Ver todos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="/administrador">Atrás</a></li>
+
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" style="display: flex;">
+        <div style="margin-top: 150px ; background-color: rgba(255,255,255,0.6); border-radius: 5px;" class=" col-4 offset-md-2">
+
+            <div class="card-body">
+
+
+
+                <div class="form-group">Titulo
+                    <input type="text" name="titulo" [(ngModel)]="novedades.titulo" placeholder="Ingrese el titulo" class="form-control">
+
+                </div>
+                <div class="form-group">Descripcion
+                    <textarea name="descripcion" [(ngModel)]="novedades.descripcion" placeholder="Ingrese una descripcion" rows="2" class="form-control"></textarea>
+
+                </div>
+
+                <div class="form-group">Link de imagen
+                    <input type="url" name="link" value="" [(ngModel)]="novedades.imagen" placeholder="Ingrese el link de la imagen" class="form-control">
+
+                </div>
+                <button class="btn btn-success btn-block" (click)="saveNewNovedad()">
+                        Guardar
+
+                    </button>
+
+
+            </div>
+        </div>
+
+
+
+        <div class="col-6 " style="margin-top: 150px;">
+            <div class="card card-body text-center" style=" background-color: rgba(255,255,255,0.6); border-radius: 5px;">
+
+                <h4>Titulo
+                    <p>{{novedades.titulo}}</p>
+                </h4>
+                <h3>Descripcion
+                    <p>{{novedades.descripcion}}</p>
+                </h3>
+                <div style="height: 200px;">
+                    <img style="height: 200px;" src="{{novedades.imagen}}">
+                </div> 
+            </div>
+        </div>
+    </div>
+</header>
